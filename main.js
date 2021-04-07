@@ -6,7 +6,7 @@ Partite dal comprendere bene come è fatto il DOM e il CSS, potete usarli a vost
 //REFS
 
 var openMenu = $("i.fas.fa-bars");
-var ham = $(".hamburger-menu");
+var menu = $(".hamburger-menu");
 var closeMenu = $(".fa-times");
 
 
@@ -14,16 +14,26 @@ var closeMenu = $(".fa-times");
 
 // Open Menu
 openMenu.click( function() {
-    ham.show().addClass("roll-in-top");
+    menu.show().addClass("roll-in-top");
 });
+
 
 // Close Menu
 closeMenu.click( function() {
-    ham.toggle().removeClass("roll-in-top");
+    menu.removeClass("roll-in-top").addClass("roll-out-top");
 });
 
 
+// Tentativo per capire animate()
 
+/*openMenu.click( function() {
+    menu.show().animate ( {
+        opacity: 0.9,
+        height: "toggle"
+      } , 5000, function() {
+        // Animation complete.
+      });
+});*/
 
 
 
@@ -33,10 +43,10 @@ closeMenu.click( function() {
 
 /*// Open Menu
 openMenu.click( function() {
-    ham.slideDown();
+    menu.slideDown();
 });
 
 // Close Menu
 closeMenu.click( function() {
-    ham.slideUp();
+    menu.slideUp();
 });*/
